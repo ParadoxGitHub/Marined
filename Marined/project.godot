@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Marined"
+run/main_scene="res://PlaceHolder Image with text.tscn"
 config/icon="res://icon.png"
 
 [rendering]

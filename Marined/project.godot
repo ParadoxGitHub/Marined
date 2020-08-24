@@ -16,8 +16,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Marined"
-run/main_scene="res://PlaceHolder Image with text.tscn"
+run/main_scene="res://TitleScreen.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/stretch/mode="viewport"
 
 [rendering]
 

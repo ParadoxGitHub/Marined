@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="Marined"
 run/main_scene="res://TitleScreen.tscn"
+boot_splash/image="res://Splash Screen.png"
 config/icon="res://icon.png"
 
 [display]

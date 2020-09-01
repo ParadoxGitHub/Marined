@@ -33,81 +33,31 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-margin_left = 176.0
-margin_top = 2.0
-margin_right = 924.0
-margin_bottom = 1081.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.52271
+margin_top = -0.840881
+margin_right = 2.52271
+margin_bottom = -0.840881
 color = Color( 0.423529, 0.423529, 0.423529, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 207.5
-margin_top = 381.828
-margin_right = 905.5
-margin_bottom = 556.828
+margin_left = 560.431
+margin_top = 125.529
+margin_right = 1258.43
+margin_bottom = 300.529
 texture = ExtResource( 1 )
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchor_top = 0.207
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 78.0975
-margin_top = 313.853
-margin_right = -357.902
-margin_bottom = -200.587
-custom_constants/margin_right = 800
-custom_constants/margin_top = 100
-custom_constants/margin_left = 0
-custom_constants/margin_bottom = 20
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-margin_left = 174.0
-margin_top = 100.0
-margin_right = 510.0
-margin_bottom = 322.0
-size_flags_horizontal = 4
-custom_constants/separation = 16
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_right = 336.0
-margin_bottom = 222.0
-size_flags_horizontal = 4
-
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-margin_right = 336.0
-margin_bottom = 68.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-texture_focused = ExtResource( 4 )
-
-[node name="TextureButton3" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-margin_top = 72.0
-margin_right = 336.0
-margin_bottom = 150.0
-disabled = true
-texture_normal = ExtResource( 11 )
-texture_hover = ExtResource( 10 )
-texture_disabled = ExtResource( 12 )
-
-[node name="TextureButton2" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-margin_top = 154.0
-margin_right = 336.0
-margin_bottom = 222.0
-texture_normal = ExtResource( 8 )
-texture_hover = ExtResource( 9 )
 
 [node name="icon" type="Sprite" parent="."]
-position = Vector2( 542.669, 201.558 )
-scale = Vector2( 0.423652, 0.423652 )
+position = Vector2( 248.602, 248.799 )
+scale = Vector2( 0.478108, 0.438027 )
 texture = ExtResource( 6 )
 
 [node name="VersionDetails" type="Label" parent="."]
@@ -125,17 +75,57 @@ __meta__ = {
 }
 
 [node name="MadeInGodotText" type="Label" parent="."]
-margin_left = 3.6189
-margin_top = 1063.02
-margin_right = 132.619
-margin_bottom = 1081.02
+margin_left = 1.44971
+margin_top = 1059.18
+margin_right = 130.45
+margin_bottom = 1077.18
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color_shadow = Color( 0.164706, 0.768627, 0.992157, 1 )
+custom_colors/font_color_shadow = Color( 0.0901961, 0.207843, 0.847059, 1 )
 custom_constants/shadow_offset_x = -1
 custom_constants/shadow_offset_y = 1
 text = "Made In Godot"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 766.238
+margin_top = 484.108
+margin_right = 1102.24
+margin_bottom = 706.108
+size_flags_horizontal = 4
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_right = 336.0
+margin_bottom = 222.0
+size_flags_horizontal = 4
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/VBoxContainer"]
+margin_right = 336.0
+margin_bottom = 68.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+texture_focused = ExtResource( 4 )
+
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 336.0
+margin_bottom = 150.0
+disabled = true
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 10 )
+texture_disabled = ExtResource( 12 )
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/VBoxContainer"]
+margin_top = 154.0
+margin_right = 336.0
+margin_bottom = 222.0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/TextureButton2" to="." method="_on_TextureButton2_pressed"]

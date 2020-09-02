@@ -505,7 +505,7 @@ scale = Vector2( 6, 6 )
 tile_set = SubResource( 49 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 5, 2, 0, 196609, 3, 0, 196609, 4, 0, 196610, 8, 0, 196608, 9, 0, 7, 65536, 0, 131072, 65537, 0, 131074, 65545, 0, 131075, 196612, 0, 3, 196617, 0, 3, 262144, 0, 0, 262145, 0, 1, 262146, 0, 1, 262147, 0, 1, 262148, 0, 131079, 262152, 0, 196608, 262153, 0, 262151, 327680, 0, 131072, 327681, 0, 131073, 327682, 0, 131073, 327683, 0, 131073, 327684, 0, 131074, 327689, 0, 131075 )
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 5, 2, 0, 196609, 3, 0, 196609, 4, 0, 196610, 8, 0, 196608, 9, 0, 7, 65536, 0, 131072, 65537, 0, 131074, 65545, 0, 131075, 196612, 0, 3, 196617, 0, 3, 262144, 0, 0, 262145, 0, 1, 262146, 0, 1, 262147, 0, 1, 262148, 0, 131079, 262152, 0, 0, 262153, 0, 131079, 327680, 0, 131072, 327681, 0, 131073, 327682, 0, 131073, 327683, 0, 131073, 327684, 0, 131074, 327688, 0, 131072, 327689, 0, 131074 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -514,6 +514,20 @@ position = Vector2( 965.907, 545.814 )
 scale = Vector2( 6, 6 )
 
 [node name="Camera" type="Camera2D" parent="YSort/Player"]
+current = true
+
+[node name="TextureButton" type="TextureButton" parent="YSort/Player"]
+margin_left = -156.984
+margin_top = -87.969
+margin_right = -106.984
+margin_bottom = -37.969
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+texture_focused = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
@@ -540,15 +554,4 @@ scale = Vector2( 6, 6 )
 [node name="Bush6" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 459.217, 905.478 )
 scale = Vector2( 6, 6 )
-
-[node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 23.1634
-margin_top = 19.5998
-margin_right = 73.1634
-margin_bottom = 69.5998
-texture_normal = ExtResource( 6 )
-texture_hover = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="YSort/Player/TextureButton" to="." method="_on_TextureButton_pressed"]
